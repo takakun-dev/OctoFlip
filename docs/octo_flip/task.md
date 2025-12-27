@@ -1,0 +1,21 @@
+# Task List
+
+- [x] **Planning**
+    - [x] Create Implementation Plan <!-- id: 0 -->
+    - [x] Define Data Model (Profiles) <!-- id: 1 -->
+    - [x] Design UI based on UX Principles <!-- id: 2 -->
+- [x] **Implementation: Core Logic**
+    - [x] Setup State Management (Context/Redux) <!-- id: 3 -->
+    - [x] Implement Profile Storage (CRUD) <!-- id: 4 -->
+    - [x] Implement Git Config Switcher Logic <!-- id: 5 -->
+    - [x] Implement SSH Config Switcher Logic (Optional/Advanced) <!-- id: 6 -->
+- [x] **Implementation: UI/UX**
+    - [x] Setup Design System (Tailwind/CSS Variables) <!-- id: 7 -->
+    - [x] Create Main Layout (Sidebar + Content) <!-- id: 8 -->
+    - [x] Implement Profile Management UI <!-- id: 9 -->
+    - [x] Implement "One-Click Switch" Button <!-- id: 10 -->
+    - [x] Apply UX Principles (Fitts, Hick, Miller) <!-- id: 11 -->
+- [x] **Verification**
+    - [x] Test Profile Creation/Editing <!-- id: 12 -->
+    - [x] Test Git Config Switching <!-- id: 13 -->
+    - [x] Verify UX Principles Compliance <!-- id: 14 -->
