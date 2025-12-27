@@ -3,7 +3,7 @@ import { electronAPI } from '@electron-toolkit/preload'
 
 import { Profile, ProfileCreate } from '@shared/types'
 
-// Custom APIs for renderer
+// レンダラー用のカスタムAPI
 const api = {
   getProfiles: (): Promise<Profile[]> => ipcRenderer.invoke('get-profiles'),
   createProfile: (profile: ProfileCreate): Promise<Profile> =>
@@ -15,9 +15,9 @@ const api = {
   getCurrentProfile: (): Promise<Profile | null> => ipcRenderer.invoke('get-current-profile')
 }
 
-// Use `contextBridge` APIs to expose Electron APIs to
-// renderer only if context isolation is enabled, otherwise
-// just add to the DOM global.
+// context isolationが有効な場合のみ、`contextBridge` APIを使用して
+// Electron APIをレンダラーに公開する。そうでない場合は、
+// DOMグローバルに追加する。
 if (process.contextIsolated) {
   try {
     contextBridge.exposeInMainWorld('electron', electronAPI)

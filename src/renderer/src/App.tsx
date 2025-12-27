@@ -39,7 +39,7 @@ function App(): React.ReactElement {
   }
 
   const handleDelete = async (id: string): Promise<void> => {
-    if (confirm('Are you sure you want to delete this profile?')) {
+    if (confirm('このプロファイルを削除してもよろしいですか？')) {
       try {
         await window.api.deleteProfile(id)
         await loadData()
@@ -78,21 +78,21 @@ function App(): React.ReactElement {
             <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
               OctoFlip
             </h1>
-            <p className="text-gray-400 mt-1">Switch GitHub accounts in one click</p>
+            <p className="text-gray-400 mt-1">Githubアカウントをワンクリックで切り替え</p>
           </div>
           <button
             onClick={() => setIsCreating(true)}
             disabled={isCreating}
             className="px-4 py-2 bg-purple-600 hover:bg-purple-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-lg font-bold transition-all shadow-lg shadow-purple-900/20 flex items-center gap-2"
           >
-            <span className="text-xl leading-none">+</span> New Profile
+            <span className="text-xl leading-none">+</span> 新規プロファイル
           </button>
         </header>
 
         {/* Current Status */}
         <section className="bg-gray-800/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm">
           <h2 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">
-            Current Status
+            現在のステータス
           </h2>
           {currentProfile ? (
             <div className="flex items-center gap-6">
@@ -107,7 +107,7 @@ function App(): React.ReactElement {
               </div>
             </div>
           ) : (
-            <div className="text-gray-500 italic">No active profile selected</div>
+            <div className="text-gray-500 italic">アクティブなプロファイルが選択されていません</div>
           )}
         </section>
 
@@ -132,7 +132,7 @@ function App(): React.ReactElement {
 
           {profiles.length === 0 && !isCreating && (
             <div className="col-span-full text-center py-12 text-gray-500 border-2 border-dashed border-gray-800 rounded-xl">
-              <p>No profiles found. Create one to get started.</p>
+              <p>プロファイルが見つかりません。作成して始めましょう。</p>
             </div>
           )}
         </section>
